@@ -1,0 +1,175 @@
+body {
+	margin: 0;
+	font-family: Arial, Verdana;
+	font-size: 18px;
+	height: 100%;
+}
+
+.wrap {
+	width: 340px;
+}
+
+.drag { 
+	height: 20px;
+	width: 340px;
+	-webkit-border-top-left-radius: 12px;
+	-webkit-border-top-right-radius: 12px;
+	-moz-border-radius-topleft: 12px;
+	-moz-border-radius-topright: 12px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+.add {
+	background: #f78d63;
+	color: #5e1b00;
+	-webkit-border-bottom-right-radius: 12px;
+	-webkit-border-bottom-left-radius: 12px;
+	-moz-border-radius-bottomright: 12px;
+	-moz-border-radius-bottomleft: 12px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+.add:hover, .add:hover:before {
+	color: #000;
+}
+
+.add:hover:before {
+	background-position: bottom, left;
+}
+
+.add:before {
+	background-image: url(../i/plus.png);
+	background-position: top, left;
+	content: '';
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+	float: left;
+}
+
+.send {
+	position: relative;
+	left: 280px;
+	top: -60px;
+	width: 20px;
+	padding: 0px;
+	margin: 0px;
+	background: #963e1b;
+	opacity: 0;
+	-webkit-border-radius: 12px 0px 12px 0px;
+	-moz-border-radius: 12px 0px 12px 0px;
+	border-radius: 12px 0px 12px 0px;
+}
+
+.send:before {
+	background-image: url(../i/email.png);
+	background-position: top, left;
+	content: '';
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin: 2px 2px;
+}
+
+.send:hover:before {
+	background-position: bottom, left;
+}
+
+.box {
+	height: 20px;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.container {
+	width: 100%;
+	/*-apple-dashboard-region: dashboard-region(control rectangle);*/
+}
+
+.delete {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	background: #CC0000;
+	cursor: pointer;
+}
+
+.delete:before {
+	background-image: url(../i/delete.png);
+	background-position: top, left;
+	content: '';
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin: 20px 20px;
+}
+
+.delete:hover:before {
+	background-position: bottom, left;
+}
+
+.approve {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	right: 0px;
+	background: #FFF;
+}
+
+.approve:before {
+	background-image: url(../i/approve.png);
+	background-position: top, left;
+	content: '';
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin: 20px 22px;
+}
+
+.line {
+	position: relative;
+	height: 60px;
+	width: 100%;
+}
+
+.task {
+	position: relative;
+	height: 60px;
+	width: 100%;
+	border: 0px;
+	font-size: 18px;
+}
+
+.task:focus {
+	outline: 0;
+}
+
+.wrap ul { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+
+.wrap li { 
+	position: relative; 
+	margin: 0px;
+	overflow: hidden;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) {
+	.delete:before { 
+		background-image: url(../i/delete@2x.png);
+	}
+	.approve:before {
+		background-image: url(../i/approve@2x.png);
+	}
+	.add:before {
+		background-image: url(../i/plus@2x.png);
+	}		
+	.send:before {
+		background-image: url(../i/email@2x.png);
+	}
+}
