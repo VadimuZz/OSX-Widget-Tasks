@@ -101,25 +101,25 @@ function createTask() {
     deleteTask(li);
   });
 
-  $(box).swipe(function( direction, offset, el ) {
-      
-      //console.log( "Moving", direction.x, "and", direction.y );
-      //console.log( "Touch moved by", offset.x, "horizontally and", offset.y, "vertically" );    
+  $(li).swipe(function( direction, offset, el ) {
+
+    //console.log( "Moving", direction.x, "and", direction.y );
+    //console.log( "Touch moved by", offset.x, "horizontally and", offset.y, "vertically" );    
     
     if(offset.y > 30 && direction.y == 'up' && animating == false ) {
-      swipeUpDown(box, el, 1);
+      swipeUpDown(box, el.find('input'), 1);
       }
 
       if(offset.y < -30 && direction.y == 'down' && animating == false ) {
-      swipeUpDown(box, el, -1);
+      swipeUpDown(box, el.find('input'), -1);
       }
 
       if(offset.x < -10 && direction.x == 'left' && animating == false ) {
-      swipeLeftRight(box, el, 1);
+      swipeLeftRight(box, el.find('input'), 1);
       }       
       
       if(offset.x > 10 && direction.x == 'right' && animating == false ) {
-      swipeLeftRight(box, el, -1);
+      swipeLeftRight(box, el.find('input'), -1);
       }
 
   });
