@@ -1,7 +1,7 @@
 OSX-Widget-Tasks
 ================
 
-# Widget with tasks list
+Widget with tasks list
 
 Screenshot of widget
 
